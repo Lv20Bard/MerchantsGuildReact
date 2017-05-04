@@ -1,0 +1,649 @@
+html{
+	height: 100vh;
+	width: 100vw;
+}
+
+body{
+	height: 100%;
+	width: 100%;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a{
+    color: #252222;
+}
+
+.nav-bar{
+	background-color: #418C18;
+	position: fixed;
+	left:0;
+	right: 0;
+	height: 50px;
+	width: 100%;
+	z-index: 1000; 
+    box-shadow: 0 2px 10px rgba(0,0,0,.2);
+}
+
+
+
+/*Sidebar*/
+#wrapper {
+	height: 100%;
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+
+#sidebar-wrapper {
+    z-index: 0;
+    position: fixed;
+    top: 50px;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background-color: #D8DAD3;
+
+
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+}
+
+/*Sidebar toggleing*/
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+
+#sidebar-wrapper.toggled {
+    width: 250px;
+}
+
+#main-content-wrapper.toggled {
+    position: relative;
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+#wrapper #sidebar-wrapper {
+    width: 0;
+}
+
+
+#wrapper #main-content-wrapper {
+	position: relative;
+	margin-right: 0;
+}
+
+.search-btn{
+    position: fixed;
+    top:100px;
+	background-color: #D8DAD3;
+	border-radius: 0;
+
+    z-index: 500;
+    display: none;
+
+}
+
+
+/*Search Button*/
+.search-btn i{
+	color: black;
+}
+
+
+/* Nav Bar*/
+.nav-dropdown{
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+    font-size: 24px;
+    width: auto;
+    border-style: none;
+
+}
+
+.nav-dropdown:hover{
+    background-color: #F1F2EB;
+}
+
+.nav-dropdown:hover button{
+    color: black;
+}
+
+.nav-dropdown:hover i{
+    color: black;
+}
+
+.nav-dropdown:hover span{
+    color: black;
+}
+
+.nav-dropdown:focus{
+    background-color: #377714;
+}
+
+
+.logo-text{
+    
+    font-size: 24px;
+    color: #fefefe;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    height: 100%;
+
+}
+
+#brand{
+    /*Gain control of all permenants you own*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    line-height: 2;
+}
+
+.nav-text{
+    color: #fefefe;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+
+
+
+
+/*Main content*/
+#main-content-wrapper{
+	height: 100%;
+	width: 100%;
+    padding: 10px 10px 10px 10px;
+	position: absolute;
+	top: 50px;
+}
+
+
+
+/*Shop section*/
+#panel-section{
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 15px;
+}
+
+
+/*Card Styles*/
+.card{
+    width: 197px;
+    border-radius: 0;
+
+}
+
+.store-card{
+    background-color: #F1F2EB;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card-footer{
+    background-color: #F1F2EB;
+}
+
+
+
+.item-panel, .panel, .panel-footer{
+	background-color: #F1F2EB;
+    height: auto;
+}
+
+.info-btn{
+	background-color: #D4AF37;
+    border-radius: 0;
+    color: white;
+    border-color: #B0912E;
+
+}
+
+.info-btn:hover{
+    background-color: #B0912E;
+    color:white;
+}
+
+.contact-btn{
+    background-color: #D4AF37;
+    border-radius: 0;
+    color: white;
+}
+
+.btn-danger{
+    border-radius: 0;
+}
+
+.btn{
+    border-radius: 0;
+}   
+
+.dropdown-menu{
+    border-radius: 0;
+}
+
+.itemTags{
+    word-wrap: break-word;
+}
+
+/*Tabs and modals*/
+
+.tab-pane, .modal-body, .modal-header, .modal-footer{
+    background-color: #D8DAD3;
+}
+
+.panel-footer{
+    border-style: none;
+}
+
+
+.nav-tabs{
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-collapse: #252222;
+}
+
+.nav-tab{
+    border-color: #252222;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.panel-img{
+    height: 160px;
+}
+
+
+
+
+
+
+/*Launch Page CSS*/
+
+#greenHeader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #418C18;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+
+    z-index: 2;
+}
+
+#greenFooter{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #418C18;
+
+    box-shadow:  0 -4px 4px 0 rgba(0, 0, 0, 0.5);
+
+    z-index: 2;
+}
+
+#videoPlayer{
+    position: absolute;
+    top:0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    
+    width: 100%;
+}
+
+#awesome_video{
+    height: 100%;
+    /*width: 100%;*/
+    overflow: hidden;
+}
+
+#callToAction{
+    position: absolute;
+    top:280px;
+
+}
+
+#callBtn{
+    background-color: #D4AF37;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+#callText{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+#facebookBtn{
+    background-color: #3b5998;
+
+}
+
+#facebookBtn a{
+    color: white;
+}
+
+#googleBtn{
+    background-color: #ff3d00;
+}
+
+#googleBtn a{
+    color: white;
+}
+    
+
+
+/*Page with item details*/
+#itemInfoWrapper{
+    padding-top: 50px;
+    height: 100%;
+
+    background-color: white;
+    height: 100%;
+
+    overflow: auto;
+
+
+}
+
+#itemWrapper{
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12);
+    height: 100%;
+    background-color: white;
+
+}
+
+
+
+
+/*profile Page*/
+.nav-tabs{
+
+}
+
+.nav-tabs{
+    background-color: #F1F2EB;
+}
+
+.active{
+    border-radius: 0;
+    background-color: #F1F2EB;
+}
+
+
+.listingSections{
+
+}
+
+
+.tabText{
+
+}
+
+.modal{
+    overflow: auto;
+}
+
+
+#mainProfileWrapper{
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    height: 100%;
+}
+
+#profileUserName{
+
+}
+
+#profilePicture{
+    min-width: 250px;
+    min-height: 250px;
+    height: auto;
+    width: auto;
+    max-width:400;
+    max-height:400;
+
+    padding-left: 15px;
+    padding-top: 10px;
+    border-radius: 25px;
+
+}
+
+
+/*Post Item Page*/
+#postWrapper{
+
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+/*Input groups*/
+.textField{
+    border-left-style:  none;
+    border-right-style: none;
+    border-top-style: none;
+    border-radius: 0px;
+
+    border-bottom-color: #939393;
+    border-bottom-width: 1px;
+
+    padding-left: 0;
+
+    font-size: 12px;
+
+}
+
+.textField:focus{
+    border-bottom-width: 2px;
+    border-bottom-color: #d4af37;
+
+}
+
+
+.newItemForm input.ng-invalid.ng-touched{
+    border-bottom-color: #d43f3a;
+}
+
+.newItemForm textarea.ng-invalid.ng-touched{
+    border-bottom-color: #d43f3a;
+}
+
+
+
+/*Input groups formating*/
+
+.postHeader{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+input{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+input:focus{
+    outline: none;
+}
+
+.inputGroup{
+    height: 72px;
+}
+
+.inputGroupLrg{
+    height: auto;
+    padding-bottom: 15px;
+}
+
+
+#itemDescriptionTextBox{
+    height: 400px;
+    resize: none;
+}
+
+.inputLabel{
+    font-size: 12px;
+    line-height: 12px;
+    padding-top: 12px;
+    padding-bottom: 6px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 0 0 0;
+    color: #939393;
+
+}
+
+.priceInput{
+    width: 100px;
+}
+
+
+
+.form-control:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.inputGroup{
+    padding-bottom: 10px;
+}
+
+.viewItemButtons{
+    padding-top:25px;
+    
+}
+.viewItemImg{
+    padding-top:25px;
+}
+
+
+/*Helpers*/
+
+.h100{
+    height: 100%;
+}
+
+.hAuto{
+    height: auto;
+}
+
+.background-silver{
+    background-color: #F1F2EB;
+}
+
+
+
+.ta-scroll-window.form-control{
+    height: 200px;
+    max-height: 200px;
+    overflow: auto;
+}
+
+
+button:focus{
+    outline:0;
+}
+
+a:focus{
+    outline:0;
+}
+
+
+@media (max-width: 720px){
+
+    /*Launch Page Media*/
+    .hideSmall{
+        display: none;
+    }
+
+    #callToAction{
+        top:0;
+    }
+
+    #callText{
+        font-size: 3.1rem;
+        text-align: center;
+        color: black;
+        text-shadow: 2px 2px 4px darkgray;
+    }
+
+    /*navbar*/
+    .nav-dropdown{
+        font-size: 2rem;
+
+    }
+
+    .panel h2{
+        font-size: 2rem;
+    }
+
+    .btn-info{
+        padding:2px 4px;
+        font-size:80%;
+        line-height: 1;
+    }     
+
+    .panel-footer h4{
+        font-size: 3rem;
+    }
+
+}   
+
+
+
