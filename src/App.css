@@ -220,6 +220,7 @@ a{
 .store-card{
     background-color: #F1F2EB;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    overflow: auto;
 }
 
 .card-footer{
@@ -231,6 +232,11 @@ a{
 .item-panel, .panel, .panel-footer{
 	background-color: #F1F2EB;
     height: auto;
+}
+
+.panel{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 0;
 }
 
 .info-btn{
@@ -638,6 +644,11 @@ a:focus{
         font-size:80%;
         line-height: 1;
     }     
+
+    .view-btn{
+        position: absolute;
+        right: 0;
+    }
 
     .panel-footer h4{
         font-size: 3rem;
