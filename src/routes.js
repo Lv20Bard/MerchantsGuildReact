@@ -1,21 +1,38 @@
 import React, {Component} from 'react';
-import {Route, HashRouter} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 import App from './App';
+
 import Store from './components/storecomponents/store';
 import Requests from './components/requestscomponents/requests';
+
+import ItemPage from './components/storecomponents/ItemPage';
+import RequestPage from './components/requestscomponents/RequestPage'
+
+import PostItem from './components/storecomponents/PostItem';
+import PostRequest from './components/requestscomponents/PostRequest'
 
 class Routes extends Component {
     render(){
         return(
-            <HashRouter>
+           <BrowserRouter>
                 <div>
-                    <Route path={`/`} component={App}/>
+                    <Route path="/" component={App} />
+
+                    <Route exact path="/store" component={Store}/>
+                    <Route exact path="/requests" component={Requests}/>
+
+                    <Route path="/store/:id" component={ItemPage}/>
+                    <Route path="/requests/:id" component={RequestPage} />
+
+                    <Route path="/postItem" component={PostItem}/>
+                    <Route path="/postRequest" component={PostRequest}/>
+
                     
-                    <Route path={`/store`} component={Store}/>
-                    <Route path={`/requests`} component={Requests}/>
-                    
+
+
+
                 </div>
-            </HashRouter>
+           </BrowserRouter>
         )
     }
 }

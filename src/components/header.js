@@ -40,8 +40,8 @@ class Header extends Component {
                 Browse<span className="caret"></span>
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a className="browse-request-btn" to={`/requests`}>Browse Requests </a></li>
-                    <li><a className="browse-items-btn" to={`/store`}>Browse Items</a></li>	
+                    <li><Link className="browse-request-btn" to={`/requests`}>Browse Requests </Link></li>
+                    <li><Link className="browse-items-btn" to={`/store`}>Browse Items</Link></li>	
                 </ul>
             </div>
 
@@ -51,8 +51,8 @@ class Header extends Component {
                 Post<span className="caret"></span>
                 </button>
                 <ul className="dropdown-menu" aria-labelledby="dLabel">
-                    <li><a className="list-product-btn" >Post A Product</a></li>
-                    <li><a className="place-request-btn" >Post a Request</a></li>
+                    <li><Link className="list-product-btn" to={`/postItem`} >Post A Product</Link></li>
+                    <li><Link className="place-request-btn" to={`/postRequest`} >Post a Request</Link></li>
                 </ul>
             </div>
 

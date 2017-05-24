@@ -12,11 +12,7 @@ export default class CardList extends Component{
 
 
             this.state = {
-                  storeItems:[{
-                        _id:"123",
-                        name:"Latex Smallsword",
-                        price:"10.00"
-                  }]
+                  storeItems:[]
             }
 
 
@@ -24,14 +20,14 @@ export default class CardList extends Component{
       
       //Get the list of Store Items 
       componentDidMount(){
-            // axios.get(`http://localhost:3001/items`)
-            // .then((res) =>{
-            //       console.log(res);
-            //       this.setState({storeItems: res.data.data})
-            // })
-            // .catch((err) =>{
-            //       console.log(err);
-            // });
+            axios.get(`http://localhost:3001/items`)
+            .then((res) =>{
+                  console.log(res);
+                  this.setState({storeItems: res.data.data})
+            })
+            .catch((err) =>{
+                  console.log(err);
+            });
       }
 
       render(){
